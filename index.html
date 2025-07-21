@@ -1,55 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>STEM Project | Innovators of Tomorrow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #00bcd4;
+      --accent: #ff4081;
+      --bg: #121212;
+      --text: #f0f0f0;
+      --card: #1e1e1e;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f4f4f9;
-      color: #333;
+      font-family: 'Open Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
     }
+
     header {
-      background-color: #006699;
-      color: white;
-      padding: 20px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      padding: 30px;
       text-align: center;
+      font-family: 'Orbitron', sans-serif;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 1px;
+    }
+
     nav {
-      background: #004466;
-      padding: 10px;
       display: flex;
       justify-content: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-    }
-    section {
-      padding: 20px;
-    }
-    .card {
-      background: white;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    footer {
-      text-align: center;
+      background-color: #1c1c1c;
       padding: 10px;
-      background-color: #006699;
-      color: white;
+    }
+
+    nav a {
+      color: var(--text);
+      margin: 0 20px;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      margin: auto;
+      height: 2px;
+      width: 0;
+      background: var(--accent);
+      transition: width 0.4s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .section {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: var(--card);
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: #222;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    @media screen and (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav {
+        flex-wrap: wrap;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Innovators of Tomorrow</h1>
-    <p>Exploring STEM at School</p>
+    <p>Exploring STEM with Passion & Precision</p>
   </header>
 
   <nav>
@@ -59,40 +119,42 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="overview">
+  <section class="section" id="overview">
     <div class="card">
-      <h2>Project Overview</h2>
-      <p>Our STEM project explores [insert project topic here] aimed at solving [insert problem]. We used principles of science, tech, engineering, and math to develop innovative solutions!</p>
+      <h2>🚀 Project Overview</h2>
+      <p>Our STEM project focuses on solving [insert your challenge] using innovative engineering, science, and coding principles.</p>
     </div>
   </section>
 
-  <section id="team">
+  <section class="section" id="team">
     <div class="card">
-      <h2>Meet the Team</h2>
+      <h2>🧠 Meet the Team</h2>
       <ul>
-        <li>Bhavye – Project Lead</li>
-        <li>[Team Member 2] – Designer</li>
-        <li>[Team Member 3] – Researcher</li>
+        <li>Bhavye – Project Lead & Developer</li>
+        <li>[Name] – Designer & Engineer</li>
+        <li>[Name] – Analyst & Researcher</li>
       </ul>
     </div>
   </section>
 
-  <section id="gallery">
+  <section class="section gallery" id="gallery">
     <div class="card">
-      <h2>Gallery</h2>
-      <p>[Insert images or diagrams here]</p>
+      <h2>📸 Project Gallery</h2>
+      <p>Here’s a peek into our prototypes and diagrams:</p>
+      <img src="images/your-diagram.png" alt="STEM Diagram">
     </div>
   </section>
 
-  <section id="contact">
+  <section class="section" id="contact">
     <div class="card">
-      <h2>Contact Us</h2>
-      <p>Have feedback or questions? Email us at <a href="mailto:stemproject@school.edu">stemproject@school.edu</a></p>
+      <h2>📬 Contact Us</h2>
+      <p>Got feedback or questions? Reach out at <a href="mailto:stemproject@school.edu">stemproject@school.edu</a></p>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 STEM Dream Team</p>
+    &copy; 2025 STEM Dream Team — Powered by Curiosity ✨
   </footer>
 </body>
 </html>
+
